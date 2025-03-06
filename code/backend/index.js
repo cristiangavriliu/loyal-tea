@@ -14,7 +14,7 @@ import http from 'http';
 import cookieParser from "cookie-parser";
 import {User} from "./models/userModel.js";
 
-const url = "mongodb+srv://dbreader:brwhs6gEkfI7hnsp@ltdata.sessgus.mongodb.net/puzzels_data?retryWrites=true&w=majority&appName=ltdata";
+const url = process.env.api_key;
 
 const PORT = 8080;
 

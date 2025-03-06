@@ -18,6 +18,7 @@ This project was developed at the **Technical University of Munich (TUM)** as pa
 ## Important Notes
 
 - **MongoDB Credentials Required**: To run the application, users must enter valid MongoDB database credentials and seed the database accordingly.
+- **Stripe**: Add your stripe API key to enable payment processing.
 
 ## Image
 
@@ -43,18 +44,16 @@ This project was developed at the **Technical University of Munich (TUM)** as pa
 ## Important Files
 
 ### Frontend
-- `LandingPage.js` – Main landing page with login/signup options.
-- `LoginPage.js` – Handles user authentication.
-- `App.js` – Root component managing routing and state.
+- `src/components/` – Contains reusable React components.
+- `src/pages/` – Contains different page components like `LandingPage.js`, `LoginPage.js`, and `App.js`.
+- `src/App.js` – Root component managing routing and state.
+- `src/index.js` – Entry point of the React application.
 
 ### Backend
-- `app.js` – Express.js server configuration.
-- `authMiddleware.js` – Middleware for handling authentication and authorization.
-- `userModel.js` – Defines the schema for user accounts.
-- `orderModel.js` – Manages order data and status.
-- `challengeModel.js` – Handles gamified challenges and user participation.
-- `gameModel.js` – Stores game-related data.
-- `itemModel.js` – Defines menu items, prices, and categories.
+- `controllers/` – Contains controller files like `itemController.js`, `challengeController.js`, `userController.js`, `orderController.js`, `gameController.js`, and `paymentController.js` which handle different routes and business logic.
+- `models/` – Contains model files like `userModel.js`, `orderModel.js`, `challengeModel.js`, and `itemModel.js` which define the schema for different collections in MongoDB.
+- `.env` – Environment variables file for storing sensitive information like API keys.
+- `index.js` – Main entry point of the backend application, sets up the server and connects to the database.
 
 ## Setup & Installation
 
@@ -64,6 +63,17 @@ This project was developed at the **Technical University of Munich (TUM)** as pa
 - **MongoDB Atlas or Local MongoDB instance**
 - **npm or yarn** (for package management)
 
+### Configuring the MongoDB and Stripe Credentials
+To enable full functionality, enter your **MongoDB** and **Stripe** credentials in the application:
+
+#### Modify `.env` to include your database and Stripe credentials:
+
+```dotenv
+cloud_name=your-mongodb-name
+api_key=your-mongodb-url
+api_secret=your-secret-key
+STRIPE_SECRET_KEY=your-stripe-secret-key
+```
 ### Cloning the Repository
 ```bash
 git clone <https://github.com/cristiangavriliu/loyal-tea.git>
@@ -79,11 +89,6 @@ cd backend
 2. **Install dependencies:**
 ```bash
 npm install
-```
-3. **Set up environment variables:** Create a `.env` file and add your MongoDB connection string and JWT secret:
-```bash
-MONGO_URI=your-mongodb-url
-JWT_SECRET=your-secret-key
 ```
 4. **Run the backend server:**
 ```bash
@@ -113,6 +118,15 @@ The frontend will be available at:
 The backend API will be available at:
 **http://localhost:5000/**
 
+## Alternative Deployment with Docker
+
+How to start the application
+
+1. Open a console in the `loyal-tea` folder and run:
+   ```bash
+   docker compose up -d
+    ```
+   
 ## Future Enhancements
 
 - **Mobile App Integration** – Develop a native app for iOS/Android.
