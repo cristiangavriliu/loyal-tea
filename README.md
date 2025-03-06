@@ -36,10 +36,7 @@ This project was developed at the **Technical University of Munich (TUM)** as pa
 - **MongoDB** – NoSQL database for storing user, order, and challenge data.
 - **Mongoose** – ODM (Object Data Modeling) library for MongoDB.
 - **JWT Authentication** – Secure user authentication.
-
-### Hosting & Infrastructure
-- **Cloud Hosting (AWS/GCP/Azure)** – Ensures scalability and performance.
-- **Payment Integration (Stripe/PayPal)** – Enables secure online transactions.
+- ** Stripe (Payment Integration)** – Enables secure online transactions.
 
 ## Important Files
 
