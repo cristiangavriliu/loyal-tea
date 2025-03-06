@@ -1,0 +1,7 @@
+frontend/package-lock.json
+backend/package-lock.json
+/.idea/misc.xml
+/.idea/vcs.xml
+/.idea/modules.xml
+/.idea/
+.DS_Store

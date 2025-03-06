@@ -1,0 +1,21 @@
+{
+  "name": "seba-master-team36-prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.lrz.de/seba-master-2024/team-36/prototype.git"
+  },
+  "private": true,
+  "devDependencies": {
+    "@material-ui/core": "^4.12.4"
+  },
+  "dependencies": {
+    "@mui/material": "^5.15.18",
+    "stripe": "^16.1.0"
+  }
+}
